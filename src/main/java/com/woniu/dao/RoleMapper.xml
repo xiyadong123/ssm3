@@ -5,11 +5,15 @@
 	    
 	    
 	  <mapper namespace="com.woniu.dao.RoleMapper">
-
+	  <select id="findOne" resultMap="ts">
+	  	select * from role where rid=#{roleId}
+	  </select>
 	  <select id="findAll" resultMap="ts">
 		  select * from role
 	  </select>
-	  
+	  <update id="update" parameterType="com.woniu.pojo.Role">
+	  	update role set rname=#{roleName} where rid=#{roleId	}
+	  </update>
 	  <resultMap type="com.woniu.pojo.Role" id="ts">
 	   			<id property="roleId" column="rid"/>
 	  			<result property="roleName" column="rname"/>

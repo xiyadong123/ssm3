@@ -26,5 +26,17 @@ public class RoleController {
 		
 		
 	}
-	
+	@RequestMapping("update")
+	public String update(Role role) {
+		ir.update(role);
+		System.out.println(role);
+		return "redirect:/findAll.do";
+	}
+	@RequestMapping("findOne")
+	public String findOne(Integer roleId,HttpServletRequest req) {
+		Role role =ir.findOne(roleId);
+		req.setAttribute("role", role);
+		System.out.println(role);
+		return "RoleUpd";
+	}
 }

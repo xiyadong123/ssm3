@@ -23,4 +23,16 @@ public class RoleServiceImpl implements IRoleService {
 		return ro.findAll();
 	}
 
+	@Override
+	public void update(Role role) {
+		// TODO Auto-generated method stub
+		 ro.update(role);
+	}
+
+	@Override
+	public Role findOne(Integer roleId) {
+		// TODO Auto-generated method stub
+		return ro.findOne(roleId);
+	}
+
 }
