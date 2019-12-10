@@ -20,6 +20,7 @@ public class RoleController {
 	@RequestMapping("findAll")
 	public String findAll(HttpServletRequest req) {
 		List<Role> ll=ir.findAll();
+		System.out.println("½øÀ´ÁË");
 		req.setAttribute("list", ll);
 		return "RoleList";
 		

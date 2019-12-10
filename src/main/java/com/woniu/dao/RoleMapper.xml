@@ -5,12 +5,13 @@
 	    
 	    
 	  <mapper namespace="com.woniu.dao.RoleMapper">
+
 	  <select id="findAll" resultMap="ts">
 		  select * from role
 	  </select>
 	  
 	  <resultMap type="com.woniu.pojo.Role" id="ts">
-	   			<id property="roleId" column="roleId"/>
-	  			<result property="roleName" column="roleName"/>
+	   			<id property="roleId" column="rid"/>
+	  			<result property="roleName" column="rname"/>
 	  </resultMap>
 	  </mapper>

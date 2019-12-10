@@ -16,9 +16,9 @@
 
 	<!--dataSource  -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-		<property name="url" value="jdbc:mysql://localhost:3306/ssdd?characterEncoding=utf-8"></property>
+		<property name="url" value="jdbc:mysql://localhost:3306/stock?characterEncoding=utf-8"></property>
 		<property name="username" value="root"></property>
-		<property name="password" value="root"></property>
+		<property name="password" value="wykwyk1234"></property>
 	</bean>
 	
 	<!-- sqlsessionfatory -->
