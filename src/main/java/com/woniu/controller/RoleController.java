@@ -8,15 +8,20 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.woniu.pojo.Role;
+import com.woniu.service.IRoleService;
 
 @Controller
 public class RoleController {
 
+	@Autowired
+	private IRoleService ir;
 	
-	@RequestMapping("find")
+	@RequestMapping("findAll")
 	public String findAll(HttpServletRequest req) {
-		System.out.println("666666");
-		return "index";
+		List<Role> ll=ir.findAll();
+		req.setAttribute("list", ll);
+		return "RoleList";
 		
 		
 	}
